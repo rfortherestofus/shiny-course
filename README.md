@@ -1,1 +1,65 @@
-# course-template
+# Shiny Course
+
+## Installation Instructions 
+
+In RStudio, first install the following packages with 
+
+```r
+install.packages("remotes")
+install.packages("shiny")
+install.packages("fivethirtyeight")
+install.packages("plotly")
+install.packages("usethis")
+```
+
+To download the course materials, you then run:
+
+```r
+usethis::use_course("rfortherestofus/shiny-course")
+```
+
+It will ask you if you want to download the course into a specific folder. You'll need to pick the option that means "yes" (the prompt is to make sure that you're paying attention to the questions, the order is switched up every time.)
+
+![](image/usethis1.png)
+
+It will then ask you if you want to delete the Zip file. You don't need this, so select the correct option:
+
+![](image/usethis2.png)
+
+Now you should be ready for the course. Let's do a quick check to makre sure that we're up and running:
+
+```r
+library(shiny)
+runApp("test_app")
+```
+
+If everything is successful, you should see a window open up:
+
+![](image/test_app.png)
+
+Confirm the app works, and then close the window. 
+
+## Opening the Project Later
+
+There are two ways to reopen the project. The first is to open the project selector in the top right of the RStudio window. There you can select the project (it will have a slightly different name - the last part will be different):
+
+![](image/usethis4.png)
+
+The other is to open the `gradual_shiny_project.Rproj` file in your file explorer or finder:
+
+![](image/usethis3.png)
+
+## Organization of the Course Materials
+
+There are four folders corresponding to the four parts of the course. In order, these are:
+
+```
+basics/
+reactives/
+plotly/
+quarto/
+```
+
+When you watch the "Your Turn" section of the videos, you'll open the corresponding assignment number in the corresponding folder (it will make more sense when you start watching the videos).
+
+Sometimes the assignments will be about adding code to an existing shiny app, or thinking through a particular question.
