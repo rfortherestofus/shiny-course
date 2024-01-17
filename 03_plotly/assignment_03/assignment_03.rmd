@@ -1,0 +1,9 @@
+---
+title: Assignment 03-03
+---
+
+Add more aesthetics to your ggplot `aes()` statement in `app.R` in this folder, such as movie_title="title".  
+
+Make sure that your app runs and that you can see the tooltip popup.
+
+

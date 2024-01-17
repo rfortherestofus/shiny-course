@@ -1,0 +1,7 @@
+---
+title: "Assignment 06"
+---
+
+The shiny code in this directory contains two mistakes. 
+
+Your assignment is to fix the input and output objects in the server component.

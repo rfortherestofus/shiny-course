@@ -1,0 +1,21 @@
+---
+title: "Movie App"
+format: html
+server: shiny
+---
+
+```{r}
+#| context: setup
+#| message: false
+#| echo: false
+```
+
+
+```{r}
+
+```
+
+
+```{r}
+#| context: server
+```

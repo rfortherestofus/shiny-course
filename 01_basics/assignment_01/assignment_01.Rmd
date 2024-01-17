@@ -1,0 +1,4 @@
+Into which object would we put a ggplot statement?
+
+A. `input` object
+B. `output` object

@@ -1,0 +1,8 @@
+---
+title: "Assignment 02"
+format: html
+---
+
+Open `base_quarto_app_input.qmd`. This is an app that has two different plots that are generated, and are controlled by the same controls.
+
+Try moving the code blocks for the plots around, or putting them in the same code block. Does this affect the general layout?

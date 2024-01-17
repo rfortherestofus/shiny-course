@@ -1,0 +1,11 @@
+---
+title: "Assignment 04"
+---
+
+Look at the `app.R` for this assignment. 
+
+How is the `categoricalVars` variable used in the app? Where is it defined?
+
+Add another option to `categoricalVars` - good ones are `race_known` or `person_of_color`.
+
+Make sure your new version of the app runs.

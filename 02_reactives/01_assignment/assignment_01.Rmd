@@ -1,0 +1,21 @@
+---
+title: "Assignment 01"
+---
+
+Build up your dplyr statement by specifying your filter command below.
+
+We want to filter the `year_release` variable. Specifically, we want whether a film was released by less than or equal to 2001.
+
+```{r}
+library(fivethirtyeight)
+library(ggplot2)
+library(dplyr)
+data(biopics)
+```
+
+```{r}
+biopics %>%
+  dplyr::filter(year_release < 2001)
+```
+
+Think about it: where would our input value go in this calculation?

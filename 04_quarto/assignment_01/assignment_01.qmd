@@ -1,0 +1,12 @@
+---
+title: "Assignment 01"
+format: html
+---
+
+## Quarto
+
+Take a look at `base_quarto_app.qmd` in this folder. What parts were moved where? Where is the UI code and where is the server code?
+
+Click "Run Document" and try the app out. What files were generated when you ran the document?
+
+Try changing the order of the code blocks. Does order matter?

@@ -1,0 +1,7 @@
+The following app in this folder contains a couple of mistakes: 
+
+One is storing the reactive, and the other mistake is calling the reactive. 
+
+Your job is to fix the code in the apps.
+
+Confirm your app runs after you've fixed it.

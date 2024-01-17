@@ -1,0 +1,8 @@
+---
+title: "Assignment 03"
+format: html
+---
+
+Take a look at `base_quarto_app_sidebar.qmd` in this folder. Run the document and look at the layout.
+
+Try changing the size of the app window - what happens to the sidebar controls?

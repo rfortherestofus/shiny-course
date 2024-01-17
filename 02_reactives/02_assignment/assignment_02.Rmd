@@ -1,0 +1,7 @@
+---
+title: "Assignment 02"
+---
+
+Modify the app code to filter by `input$year_slider`. Then use the reactive in the ggplot() statement;.
+
+Call the reactive that you've made in your `ggplot()` statement.

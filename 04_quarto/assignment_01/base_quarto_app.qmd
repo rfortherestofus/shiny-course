@@ -1,0 +1,33 @@
+---
+title: "Movie App"
+format: html
+server: shiny
+---
+
+
+
+```{r}
+#| context: setup
+#| message: false
+#| echo: false
+library(shiny)
+library(tidyverse)
+library(fivethirtyeight)
+
+##load the biopics data
+data(biopics)
+biopics <- biopics %>% filter(!is.na(box_office))
+```
+
+
+```{r}
+sliderInput("year_filter", 
+      "Select Highest Year", 
+      min = 1915,
+      max=2014, 
+      value = 2014)
+
+plotOutput("movie_plot")
+```
+
+

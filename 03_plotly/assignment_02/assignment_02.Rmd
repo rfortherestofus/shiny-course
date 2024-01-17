@@ -1,0 +1,7 @@
+---
+title: "Assignment 02"
+---
+
+In the `app.R` in this folder, change the `renderPlot` to `renderPlotly` and `plotOutput` to `plotlyOutput`.
+
+Fix the `ggplotly()` statement. What goes in this statement?

@@ -1,0 +1,32 @@
+---
+title: "assignment_01"
+---
+
+Run the code below and make sure it renders as a Plotly plot.
+
+Try changing the `color` aesthetic to one of the following variables:
+
+- `country`
+- `subject_sex`
+- `race_known`
+
+```{r}
+library(plotly)
+library(ggplot2)
+library(dplyr)
+library(fivethirtyeight)
+
+##load the biopics data
+data(biopics)
+biopics <- biopics %>% filter(!is.na(box_office))
+
+
+out_plot <- ggplot(biopics) +
+  aes(y=box_office, 
+      x=year_release,
+      color=type_of_subject,
+      movie_title=title) + 
+  geom_point()
+
+ggplotly(out_plot)
+```

@@ -1,0 +1,9 @@
+---
+title: "Assignment 01_05"
+---
+
+Wire the `selectInput` into the `color = .data[[]]` line of the `app.R` in this folder.
+
+Make sure your code runs.
+
+
