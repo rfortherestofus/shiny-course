@@ -44,7 +44,7 @@ If everything is successful, you should see a window open up:
 
 ![](image/test_app.png)
 
-Confirm the app works, and then close the window. 
+Confirm the app works by moving the slider, and then close the window. You should be all set up for the course.
 
 ## Opening the Project Later
 
