@@ -15,18 +15,25 @@ install.packages("usethis")
 To download the course materials, you then run:
 
 ```r
-usethis::use_course("rfortherestofus/shiny-course")
+library(usethis)
+use_course("rfortherestofus/shiny-course")
 ```
 
-It will ask you if you want to download the course into a specific folder. You'll need to pick the option that means "yes" (the prompt is to make sure that you're paying attention to the questions, the order is switched up every time.)
+It will ask you if you want to download the course into a specific folder. If you don't like that folder, you can specify a different location using the `destdir` argument. For example, if I wanted to install it into my `Code/` folder in `/Users/tedladeras/`:
+
+```r
+usethis::use_course("rfortherestofus/shiny-course", destdir="/Users/tedladeras/Code/")
+```
+
+You'll need to pick the option that means "yes" (the prompt is to make sure that you're paying attention to the questions, the order is switched up every time.)
 
 ![](image/usethis1.png)
 
-It will then ask you if you want to delete the Zip file. You don't need this, so select the correct option:
+It will then ask you if you want to delete the Zip file. You don't need this, so select the option that means "yes" again:
 
 ![](image/usethis2.png)
 
-Now you should be ready for the course. Let's do a quick check to makre sure that we're up and running:
+Now you should be ready for the course. Let's do a quick check to make sure that we're up and running:
 
 ```r
 library(shiny)
@@ -49,6 +56,15 @@ The other is to open the `gradual_shiny_project.Rproj` file in your file explore
 
 ![](image/usethis3.png)
 
+## Resetting the course
+
+In case you accidentally delete things, you can download a new copy with course materials using `use_course()` again. It will download a fresh copy as a new project. The old project will remain, with a new id:
+
+```r
+library(usethis)
+use_course("rfortherestofus/shiny-course")
+```
+
 ## Organization of the Course Materials
 
 There are four folders corresponding to the four parts of the course. In order, these are:
@@ -63,3 +79,5 @@ quarto/
 When you watch the "Your Turn" section of the videos, you'll open the corresponding assignment number in the corresponding folder (it will make more sense when you start watching the videos).
 
 Sometimes the assignments will be about adding code to an existing shiny app, or thinking through a particular question.
+
+Hope you enjoy the course! 
