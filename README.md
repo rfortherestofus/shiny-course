@@ -52,7 +52,7 @@ There are two ways to reopen the project. The first is to open the project selec
 
 ![](image/usethis4.png)
 
-The other is to open the `gradual_shiny_project.Rproj` file in your file explorer or finder:
+The other is to open the `shiny-course.Rproj` file in your file explorer or finder:
 
 ![](image/usethis3.png)
 
