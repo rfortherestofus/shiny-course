@@ -15,11 +15,13 @@ ui <- fluidPage(
 
 server <- function(input, output) {
   
-  paired_plot2 <- renderPlot({.       #2 Mistakes here
+  #fix this line - make sure it matched the corresponding ui line above
+  paired_plot2 <- renderPlot({       
     ggplot(biopics) + 
       aes(x=year_release, 
           y=box_office, 
-          color= .data[[input$color_select_new]]) +   #Mistake here
+  #fix this line
+          color= .data[[input$color_select_new]]) + 
       geom_point()
   })
 }
