@@ -12,7 +12,7 @@ ui <- fluidPage(
 
 server <- function(input, output) {
   
-  output$paired_plot <- renderPlotly({
+  output$paired_plot <- renderPlot({
     
     out_plot <- ggplot(biopics) + 
       aes(x=year_release, 
@@ -21,7 +21,7 @@ server <- function(input, output) {
           title=title) +
       geom_point()
     
-    ggplotly(out_plot)
+    ggplot(out_plot)
   })
   
 }
