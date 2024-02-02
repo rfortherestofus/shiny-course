@@ -17,7 +17,7 @@ ui <- fluidPage(
 server <- function(input, output) {
   
   # fix this line - reactives aren't sent to output
-  output$biopics_filt <- reactive({
+  output$biopics_filtered <- reactive({
  
     biopics %>%
       dplyr::filter(year_release < input$year_slider)
@@ -29,7 +29,7 @@ server <- function(input, output) {
     
     # fix this line - we need to call our reactive
     # as a function
-    ggplot( biopics_filt  ) + 
+    ggplot( biopics_filtered  ) + 
       aes(x=year_release, 
           y=box_office, 
           color= type_of_subject) +
