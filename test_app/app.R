@@ -1,51 +1,27 @@
-#
-# This is a Shiny web application. You can run the application by clicking
-# the 'Run App' button above.
-#
-# Find out more about building applications with Shiny here:
-#
-#    https://shiny.posit.co/
-#
-
 library(shiny)
+library(fivethirtyeight)
 
-# Define UI for application that draws a histogram
+data(biopics)
+
+categoricalVars <- c("country", "type_of_subject", "subject_race", "subject_sex")
+
 ui <- fluidPage(
-
-    # Application title
-    titlePanel("Old Faithful Geyser Data"),
-
-    # Sidebar with a slider input for number of bins 
-    sidebarLayout(
-        sidebarPanel(
-            sliderInput("bins",
-                        "Number of bins:",
-                        min = 1,
-                        max = 50,
-                        value = 30)
-        ),
-
-        # Show a plot of the generated distribution
-        mainPanel(
-           plotOutput("distPlot")
-        )
-    )
+  selectInput(inputId = "color_select", 
+              label = "Select Categorical Variable", 
+              choices = categoricalVars),
+  plotOutput("paired_plot")
 )
 
-# Define server logic required to draw a histogram
+
 server <- function(input, output) {
-
-    output$distPlot <- renderPlot({
-        # generate bins based on input$bins from ui.R
-        x    <- faithful[, 2]
-        bins <- seq(min(x), max(x), length.out = input$bins + 1)
-
-        # draw the histogram with the specified number of bins
-        hist(x, breaks = bins, col = 'darkgray', border = 'white',
-             xlab = 'Waiting time to next eruption (in mins)',
-             main = 'Histogram of waiting times')
-    })
+ 
+  paired_plot2 <- renderPlot({.       #2 Mistakes here
+    ggplot(biopics) + 
+      aes(x=year_release, 
+          y=box_office, 
+          color= .data[[input$color_select_new]]) +   #Mistake here
+      geom_point()
+  })
 }
 
-# Run the application 
 shinyApp(ui = ui, server = server)

@@ -1,5 +1,16 @@
 # Shiny Course
 
+## Welcome to the Course!
+
+My name is Ted Laderas and I'll be guiding you through this introductory course on Shiny.
+
+I'm really excited to help introduce you to one of the most powerful interactive visualization frameworks out there. There are a lot of exciting things you can do with Shiny including building interactive graphs and maps.
+
+I also want to remind you to be patient with yourself as you go through the material. A lot of things may not be immediately apparent, but keep at it. It's worth it.
+
+
+
+
 ## Installation Instructions 
 
 In RStudio, first install the following packages with 

@@ -5,7 +5,6 @@ server: shiny
 ---
 
 
-
 ```{r}
 #| context: setup
 #| message: false
@@ -30,4 +29,20 @@ sliderInput("year_filter",
 plotOutput("movie_plot")
 ```
 
+```{r}
+#| context: server
 
+biopics_filtered <- reactive({
+  req(input$year_filter)
+  biopics %>%
+    filter(year_release < input$year_filter)
+})
+
+output$movie_plot <- renderPlot({
+  
+  ggplot(biopics_filtered()) +
+    aes(y=box_office, x=year_release, color=type_of_subject) + 
+    geom_point()
+})
+
+```
