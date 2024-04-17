@@ -12,10 +12,3 @@ library(ggplot2)
 library(dplyr)
 data(biopics)
 ```
-
-```{r}
-biopics %>%
-  dplyr::filter(year_release < 2001)
-```
-
-Think about it: where would our input value go in this calculation?
