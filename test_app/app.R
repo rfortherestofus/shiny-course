@@ -6,22 +6,24 @@ data(biopics)
 categoricalVars <- c("country", "type_of_subject", "subject_race", "subject_sex")
 
 ui <- fluidPage(
-  selectInput(inputId = "color_select", 
-              label = "Select Categorical Variable", 
-              choices = categoricalVars),
-  plotOutput("paired_plot")
+  selectInput(inputId = "n_breaks",
+              label = "Number of bins in histogram (approximate):",
+              choices = c(10, 20, 35, 50),
+              selected = 20),
+  
+  plotOutput(outputId = "main_plot", height = "300px")
 )
 
-
 server <- function(input, output) {
- 
-  paired_plot2 <- renderPlot({.       #2 Mistakes here
-    ggplot(biopics) + 
-      aes(x=year_release, 
-          y=box_office, 
-          color= .data[[input$color_select_new]]) +   #Mistake here
-      geom_point()
+  
+  output$main_plot <- renderPlot({
+    
+    hist(faithful$eruptions,
+         probability = TRUE,
+         breaks = as.numeric(input$n_breaks),
+         xlab = "Duration (minutes)",
+         main = "Geyser eruption duration")
+    
   })
 }
-
 shinyApp(ui = ui, server = server)
