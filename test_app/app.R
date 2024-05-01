@@ -1,16 +1,9 @@
 library(shiny)
-library(fivethirtyeight)
-
-data(biopics)
-
-categoricalVars <- c("country", "type_of_subject", "subject_race", "subject_sex")
 
 ui <- fluidPage(
-  selectInput(inputId = "n_breaks",
-              label = "Number of bins in histogram (approximate):",
-              choices = c(10, 20, 35, 50),
-              selected = 20),
-  
+  sliderInput(inputId = "n_breaks", label = "Number of Bins in Histogram", min = 5,
+              max=40,value = 30),
+
   plotOutput(outputId = "main_plot", height = "300px")
 )
 
